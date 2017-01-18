@@ -1,0 +1,880 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="kryptonLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 20</value>
+  </data>
+  <data name="&gt;&gt;groupCommon.Panel.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonGroupPanel, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel9.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="comboLicense.Items1" xml:space="preserve">
+    <value>GPLv2+ (GNU General Public License version 2 or later)</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel5.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel1.Parent" xml:space="preserve">
+    <value>groupCommon.Panel</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="kryptonLabel8.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="comboCategory.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;buttonOK.Name" xml:space="preserve">
+    <value>buttonOK</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel1.Name" xml:space="preserve">
+    <value>kryptonLabel1</value>
+  </data>
+  <data name="groupCommon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="kryptonCheckBox2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="kryptonLabel8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 8</value>
+  </data>
+  <data name="comboCategory.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="groupCommon.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="textHeader.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="comboCategory.Items2" xml:space="preserve">
+    <value>География</value>
+  </data>
+  <data name="groupCommon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>407, 232</value>
+  </data>
+  <data name="buttonOK.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
+    <value>openFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;groupLanguages.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="kryptonCheckBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;kryptonCheckBox1.Parent" xml:space="preserve">
+    <value>groupLanguages.Panel</value>
+  </data>
+  <data name="&gt;&gt;textHeader.Name" xml:space="preserve">
+    <value>textHeader</value>
+  </data>
+  <data name="&gt;&gt;kryptonCheckBox1.Name" xml:space="preserve">
+    <value>kryptonCheckBox1</value>
+  </data>
+  <data name="&gt;&gt;textEmail.Parent" xml:space="preserve">
+    <value>groupCommon.Panel</value>
+  </data>
+  <assembly alias="ComponentFactory.Krypton.Toolkit" name="ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e" />
+  <data name="buttonSpecAny2.Edge" type="ComponentFactory.Krypton.Toolkit.PaletteRelativeEdgeAlign, ComponentFactory.Krypton.Toolkit">
+    <value>Near</value>
+  </data>
+  <data name="&gt;&gt;groupCommon.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonGroupBox, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;groupLanguages.Panel.Name" xml:space="preserve">
+    <value>groupLanguages.Panel</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>432, 412</value>
+  </data>
+  <data name="kryptonLabel9.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="kryptonCheckBox2.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="&gt;&gt;buttonOK.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textHeader.Parent" xml:space="preserve">
+    <value>groupCommon.Panel</value>
+  </data>
+  <data name="kryptonLabel5.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="&gt;&gt;kryptonLabel6.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel4.Parent" xml:space="preserve">
+    <value>groupCommon.Panel</value>
+  </data>
+  <data name="textHeader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 20</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Свойства темы</value>
+  </data>
+  <data name="textName.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel9.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;groupCommon.Panel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel1.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="kryptonCheckBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 78</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel9.Parent" xml:space="preserve">
+    <value>groupLanguages.Panel</value>
+  </data>
+  <data name="groupLanguages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 250</value>
+  </data>
+  <data name="textEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="buttonSpecAny2.Type" type="ComponentFactory.Krypton.Toolkit.PaletteButtonSpecStyle, ComponentFactory.Krypton.Toolkit">
+    <value>Close</value>
+  </data>
+  <data name="buttonCancel.Values.ExtraText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;buttonCancel.Name" xml:space="preserve">
+    <value>buttonCancel</value>
+  </data>
+  <data name="kryptonLabel4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel4.Name" xml:space="preserve">
+    <value>kryptonLabel4</value>
+  </data>
+  <data name="kryptonLabel9.Values.ExtraText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel8.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="kryptonLabel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 20</value>
+  </data>
+  <data name="groupCommon.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;groupLanguages.Name" xml:space="preserve">
+    <value>groupLanguages</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel3.Parent" xml:space="preserve">
+    <value>groupCommon.Panel</value>
+  </data>
+  <data name="comboCategory.Items4" xml:space="preserve">
+    <value>История</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel5.Name" xml:space="preserve">
+    <value>kryptonLabel5</value>
+  </data>
+  <data name="kryptonLabel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 161</value>
+  </data>
+  <data name="kryptonCheckBox1.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="textHeader.Text" xml:space="preserve">
+    <value>Без имени</value>
+  </data>
+  <data name="&gt;&gt;groupLanguages.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="kryptonLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupCommon.Text" xml:space="preserve">
+    <value>Общие сведения о документе</value>
+  </data>
+  <data name="comboCulture2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="kryptonLabel1.Values.ExtraText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="comboCulture2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 21</value>
+  </data>
+  <data name="&gt;&gt;buttonCancel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="kryptonLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 53</value>
+  </data>
+  <data name="textHeader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 8</value>
+  </data>
+  <data name="kryptonLabel2.Values.ExtraText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="kryptonLabel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 20</value>
+  </data>
+  <data name="&gt;&gt;textEmail.Name" xml:space="preserve">
+    <value>textEmail</value>
+  </data>
+  <data name="comboCulture2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 30</value>
+  </data>
+  <data name="&gt;&gt;buttonCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="comboCulture1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;groupLanguages.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonGroupBox, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="kryptonLabel2.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="&gt;&gt;kryptonLabel4.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="groupCommon.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="comboLicense.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="kryptonCheckBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>272, 20</value>
+  </data>
+  <data name="kryptonLabel6.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;textHeader.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="kryptonCheckBox2.Values.Text" xml:space="preserve">
+    <value>Загрузить грамматические свойства языков</value>
+  </data>
+  <data name="kryptonLabel3.Values.Text" xml:space="preserve">
+    <value>Адрес эл. почты</value>
+  </data>
+  <data name="kryptonLabel5.Values.ExtraText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonOK.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="textHeader.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel1.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="comboCulture2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel6.Parent" xml:space="preserve">
+    <value>groupCommon.Panel</value>
+  </data>
+  <data name="kryptonLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="&gt;&gt;comboCategory.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonComboBox, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="textComment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 76</value>
+  </data>
+  <data name="groupLanguages.Values.Heading" xml:space="preserve">
+    <value>Языки</value>
+  </data>
+  <data name="buttonCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;textEmail.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="kryptonLabel9.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;kryptonCheckBox2.Name" xml:space="preserve">
+    <value>kryptonCheckBox2</value>
+  </data>
+  <data name="buttonSpecAny1.Edge" type="ComponentFactory.Krypton.Toolkit.PaletteRelativeEdgeAlign, ComponentFactory.Krypton.Toolkit">
+    <value>Near</value>
+  </data>
+  <data name="kryptonLabel9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 20</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel3.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel3.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="kryptonLabel8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 20</value>
+  </data>
+  <data name="buttonCancel.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="kryptonLabel1.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="&gt;&gt;kryptonLabel3.Name" xml:space="preserve">
+    <value>kryptonLabel3</value>
+  </data>
+  <data name="&gt;&gt;textComment.Parent" xml:space="preserve">
+    <value>groupCommon.Panel</value>
+  </data>
+  <data name="&gt;&gt;comboCulture2.Name" xml:space="preserve">
+    <value>comboCulture2</value>
+  </data>
+  <data name="buttonOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 25</value>
+  </data>
+  <data name="comboCategory.Items" xml:space="preserve">
+    <value>Языки</value>
+  </data>
+  <data name="&gt;&gt;kryptonCheckBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;comboCulture1.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonComboBox, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="kryptonLabel9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 30</value>
+  </data>
+  <data name="comboLicense.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 21</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel5.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="kryptonLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 30</value>
+  </data>
+  <data name="comboCulture1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;comboCulture1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="comboCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 21</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="&gt;&gt;groupCommon.Panel.Parent" xml:space="preserve">
+    <value>groupCommon</value>
+  </data>
+  <data name="kryptonLabel6.Values.Text" xml:space="preserve">
+    <value>Лицензия</value>
+  </data>
+  <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 379</value>
+  </data>
+  <data name="kryptonLabel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 76</value>
+  </data>
+  <data name="comboCategory.Items5" xml:space="preserve">
+    <value>Подготовка к словарному диктанту</value>
+  </data>
+  <data name="&gt;&gt;textComment.Name" xml:space="preserve">
+    <value>textComment</value>
+  </data>
+  <data name="comboLicense.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel9.Name" xml:space="preserve">
+    <value>kryptonLabel9</value>
+  </data>
+  <data name="comboLicense.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 184</value>
+  </data>
+  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>329, 379</value>
+  </data>
+  <data name="&gt;&gt;comboCulture1.Name" xml:space="preserve">
+    <value>comboCulture1</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel8.Name" xml:space="preserve">
+    <value>kryptonLabel8</value>
+  </data>
+  <data name="&gt;&gt;comboLicense.Parent" xml:space="preserve">
+    <value>groupCommon.Panel</value>
+  </data>
+  <data name="&gt;&gt;comboCulture1.Parent" xml:space="preserve">
+    <value>groupLanguages.Panel</value>
+  </data>
+  <data name="kryptonCheckBox1.Values.ExtraText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="comboCategory.Items1" xml:space="preserve">
+    <value>Музыка</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel6.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel2.Parent" xml:space="preserve">
+    <value>groupCommon.Panel</value>
+  </data>
+  <data name="&gt;&gt;textComment.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="openFileDialog1.Filter" xml:space="preserve">
+    <value>Vocabulary Test Files|*.vtf</value>
+  </data>
+  <data name="textName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 30</value>
+  </data>
+  <data name="textComment.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;groupLanguages.Panel.Parent" xml:space="preserve">
+    <value>groupLanguages</value>
+  </data>
+  <data name="&gt;&gt;buttonSpecAny1.Name" xml:space="preserve">
+    <value>buttonSpecAny1</value>
+  </data>
+  <data name="groupCommon.Values.Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="kryptonCheckBox2.Text" xml:space="preserve">
+    <value>Загрузить грамматические свойства языков</value>
+  </data>
+  <data name="kryptonCheckBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 20</value>
+  </data>
+  <data name="&gt;&gt;comboCulture2.Parent" xml:space="preserve">
+    <value>groupLanguages.Panel</value>
+  </data>
+  <data name="comboCulture1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 8</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel6.Name" xml:space="preserve">
+    <value>kryptonLabel6</value>
+  </data>
+  <data name="&gt;&gt;groupCommon.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="kryptonLabel4.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="&gt;&gt;comboLicense.Name" xml:space="preserve">
+    <value>comboLicense</value>
+  </data>
+  <data name="&gt;&gt;textEmail.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="kryptonLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="kryptonLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 25</value>
+  </data>
+  <data name="kryptonLabel2.Values.Text" xml:space="preserve">
+    <value>Автор</value>
+  </data>
+  <data name="textComment.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="kryptonLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 8</value>
+  </data>
+  <data name="comboCategory.Items3" xml:space="preserve">
+    <value>Анатомия</value>
+  </data>
+  <data name="kryptonLabel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 20</value>
+  </data>
+  <data name="&gt;&gt;textHeader.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="groupCommon.Values.Heading" xml:space="preserve">
+    <value>Общие сведения о документе</value>
+  </data>
+  <data name="groupLanguages.Text" xml:space="preserve">
+    <value>Языки</value>
+  </data>
+  <data name="&gt;&gt;textName.Name" xml:space="preserve">
+    <value>textName</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ThemeDialog</value>
+  </data>
+  <data name="&gt;&gt;comboLicense.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonComboBox, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="textName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 20</value>
+  </data>
+  <data name="&gt;&gt;buttonSpecAny1.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.ButtonSpecAny, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="kryptonLabel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 184</value>
+  </data>
+  <data name="buttonOK.Values.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="groupLanguages.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="kryptonCheckBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;buttonCancel.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="kryptonLabel8.Values.Text" xml:space="preserve">
+    <value>Первый язык</value>
+  </data>
+  <data name="kryptonLabel5.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;buttonOK.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonForm, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel8.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="groupLanguages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>407, 123</value>
+  </data>
+  <data name="buttonOK.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="&gt;&gt;kryptonLabel4.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;buttonOK.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textName.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;groupCommon.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel2.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel2.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="buttonCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="kryptonLabel5.Values.Text" xml:space="preserve">
+    <value>Категория</value>
+  </data>
+  <data name="&gt;&gt;textName.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;groupLanguages.Panel.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonGroupPanel, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="groupLanguages.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;groupLanguages.Panel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonSpecAny1.Type" type="ComponentFactory.Krypton.Toolkit.PaletteButtonSpecStyle, ComponentFactory.Krypton.Toolkit">
+    <value>Close</value>
+  </data>
+  <data name="kryptonCheckBox1.Values.Text" xml:space="preserve">
+    <value>Задать грамматические свойства языков</value>
+  </data>
+  <data name="textComment.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="kryptonLabel4.Values.ExtraText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="kryptonLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 20</value>
+  </data>
+  <data name="kryptonCheckBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 56</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel8.Parent" xml:space="preserve">
+    <value>groupLanguages.Panel</value>
+  </data>
+  <data name="kryptonLabel9.Values.Text" xml:space="preserve">
+    <value>Второй язык</value>
+  </data>
+  <data name="&gt;&gt;kryptonCheckBox2.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonCheckBox, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;textName.Parent" xml:space="preserve">
+    <value>groupCommon.Panel</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel5.Parent" xml:space="preserve">
+    <value>groupCommon.Panel</value>
+  </data>
+  <data name="kryptonLabel6.Values.ExtraText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="kryptonCheckBox1.Text" xml:space="preserve">
+    <value>Задать грамматические свойства языков</value>
+  </data>
+  <data name="kryptonLabel3.Values.ExtraText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="kryptonLabel1.Values.Text" xml:space="preserve">
+    <value>Заголовок</value>
+  </data>
+  <data name="groupLanguages.Values.Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;groupCommon.Panel.Name" xml:space="preserve">
+    <value>groupCommon.Panel</value>
+  </data>
+  <data name="kryptonCheckBox2.Values.ExtraText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;comboCategory.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;comboCulture2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;groupCommon.Name" xml:space="preserve">
+    <value>groupCommon</value>
+  </data>
+  <data name="&gt;&gt;textComment.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="kryptonCheckBox1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="kryptonLabel6.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="buttonCancel.Values.Text" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel2.Name" xml:space="preserve">
+    <value>kryptonLabel2</value>
+  </data>
+  <data name="&gt;&gt;kryptonCheckBox1.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonCheckBox, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="kryptonLabel8.Values.ExtraText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 20</value>
+  </data>
+  <data name="&gt;&gt;kryptonCheckBox2.Parent" xml:space="preserve">
+    <value>groupLanguages.Panel</value>
+  </data>
+  <data name="kryptonLabel3.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="comboCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 161</value>
+  </data>
+  <data name="buttonOK.Values.ExtraText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="comboLicense.Items" xml:space="preserve">
+    <value>Общественное достояние</value>
+  </data>
+  <data name="textEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 53</value>
+  </data>
+  <data name="textEmail.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;comboLicense.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="comboCulture1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 21</value>
+  </data>
+  <data name="textComment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 79</value>
+  </data>
+  <data name="&gt;&gt;buttonSpecAny2.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.ButtonSpecAny, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;comboCulture2.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonComboBox, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;comboCategory.Name" xml:space="preserve">
+    <value>comboCategory</value>
+  </data>
+  <data name="&gt;&gt;comboCategory.Parent" xml:space="preserve">
+    <value>groupCommon.Panel</value>
+  </data>
+  <data name="groupLanguages.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="kryptonLabel4.Values.Text" xml:space="preserve">
+    <value>Комментарий</value>
+  </data>
+  <data name="&gt;&gt;kryptonCheckBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;buttonSpecAny2.Name" xml:space="preserve">
+    <value>buttonSpecAny2</value>
+  </data>
+  <data name="kryptonLabel8.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>440, 446</value>
+  </data>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>
