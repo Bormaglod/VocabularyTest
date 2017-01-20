@@ -31,7 +31,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.buttonDefine = new System.Windows.Forms.ToolStripButton();
             this.buttonDelete = new System.Windows.Forms.ToolStripButton();
-            this.kryptonListBox1 = new ComponentFactory.Krypton.Toolkit.KryptonListBox();
+            this.listLexical = new ComponentFactory.Krypton.Toolkit.KryptonListBox();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,20 +67,20 @@
             this.buttonDelete.Text = "Удалить";
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
-            // kryptonListBox1
+            // listLexical
             // 
-            this.kryptonListBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonListBox1.Location = new System.Drawing.Point(0, 25);
-            this.kryptonListBox1.Name = "kryptonListBox1";
-            this.kryptonListBox1.Size = new System.Drawing.Size(284, 237);
-            this.kryptonListBox1.TabIndex = 1;
+            this.listLexical.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listLexical.Location = new System.Drawing.Point(0, 25);
+            this.listLexical.Name = "listLexical";
+            this.listLexical.Size = new System.Drawing.Size(284, 237);
+            this.listLexical.TabIndex = 1;
             // 
             // LexicalWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.kryptonListBox1);
+            this.Controls.Add(this.listLexical);
             this.Controls.Add(this.toolStrip1);
             this.Name = "LexicalWindow";
             this.Text = "LexicalWindow";
@@ -96,6 +96,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton buttonDefine;
         private System.Windows.Forms.ToolStripButton buttonDelete;
-        private ComponentFactory.Krypton.Toolkit.KryptonListBox kryptonListBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonListBox listLexical;
     }
 }

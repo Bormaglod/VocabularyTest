@@ -176,6 +176,65 @@ namespace VocabularyTest.Addons.VocabularyWindow
             }
         }
 
+        void IVocabularyWindow.DefineLexicalData(dictionary_type lexicalType)
+        {
+            Word[] selected = SelectedWords().OrderBy(x => x.Id).ToArray();
+            if (selected.Length > 1)
+            {
+                using (ISession session = DataHelper.OpenSession())
+                {
+                    using (ITransaction transaction = session.BeginTransaction())
+                    {
+                        Dictionary d = null;
+                        try
+                        {
+                            for (int i = 0; i < selected.Length; i++)
+                            {
+                                for (int j = i + 1; j < selected.Length; j++)
+                                {
+                                    d = new Dictionary();
+                                    d.Left = selected[i];
+                                    d.Right = selected[j];
+                                    d.DictionaryType = lexicalType;
+                                    session.SaveOrUpdate(d);
+                                }
+                            }
+
+                            transaction.Commit();
+                        }
+                        catch (ADOException e)
+                        {
+                            transaction.Rollback();
+                            Trace.TraceError(ErrorHelper.Message(e));
+                            PostgresException ne = e.InnerException as PostgresException;
+                            if (ne != null && ne.SqlState == "23505")
+                            {
+                                string format = string.Empty;
+                                switch (lexicalType)
+                                {
+                                    case dictionary_type.synonym:
+                                        format = Strings.SynonymsAlreadyExist;
+                                        break;
+                                    case dictionary_type.antonym:
+                                        format = Strings.AntnymsAlreadyExist;
+                                        break;
+                                    default:
+                                        break;
+                                }
+
+                                KryptonMessageBox.Show(this, string.Format(format, d.Left, d.Right), Strings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                ErrorHelper.ShowDbError(this, e);
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
         void IVocabularyWindow.Update()
         {
             CreateWordTypeColumns();
@@ -661,65 +720,6 @@ namespace VocabularyTest.Addons.VocabularyWindow
             return null;
         }
 
-        void DefineLexicalData(Dictionary.dictionary_type lexicalType)
-        {
-            Word[] selected = SelectedWords().OrderBy(x => x.Id).ToArray();
-            if (selected.Length > 1)
-            {
-                using (ISession session = DataHelper.OpenSession())
-                {
-                    using (ITransaction transaction = session.BeginTransaction())
-                    {
-                        Dictionary d = null;
-                        try
-                        {
-                            for (int i = 0; i < selected.Length; i++)
-                            {
-                                for (int j = i + 1; j < selected.Length; j++)
-                                {
-                                    d = new Dictionary();
-                                    d.Left = selected[i];
-                                    d.Right = selected[j];
-                                    d.DictionaryType = lexicalType;
-                                    session.SaveOrUpdate(d);
-                                }
-                            }
-
-                            transaction.Commit();
-                        }
-                        catch (ADOException e)
-                        {
-                            transaction.Rollback();
-                            Trace.TraceError(ErrorHelper.Message(e));
-                            PostgresException ne = e.InnerException as PostgresException;
-                            if (ne != null && ne.SqlState == "23505")
-                            {
-                                string format = string.Empty;
-                                switch (lexicalType)
-                                {
-                                    case Dictionary.dictionary_type.synonym:
-                                        format = Strings.SynonymsAlreadyExist;
-                                        break;
-                                    case Dictionary.dictionary_type.antonym:
-                                        format = Strings.AntnymsAlreadyExist;
-                                        break;
-                                    default:
-                                        break;
-                                }
-                                
-                                KryptonMessageBox.Show(this, string.Format(format, d.Left, d.Right), Strings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            else
-                            {
-                                ErrorHelper.ShowDbError(this, e);
-                            }
-                        }
-                        
-                    }
-                }
-            }
-        }
-
         void ClearWordsMenu(ToolStripMenuItem menu)
         {
             while (menu.DropDownItems.Count > 2)
@@ -1183,21 +1183,15 @@ namespace VocabularyTest.Addons.VocabularyWindow
             {
                 using (ITransaction transaction = session.BeginTransaction())
                 {
-                    IQueryOver<Dictionary> query = session.QueryOver<Dictionary>()
-                        .Where(pr => pr.Left == word || pr.Right == word);
+                    IList<Dictionary> list = session.QueryOver<Dictionary>()
+                        .Where(pr => pr.Left == word || pr.Right == word)
+                        .List();
 
-                    IList<Dictionary> dict_words = query.List<Dictionary>();
+                    IEnumerable<Dictionary> synonyms = list.Where(pr => pr.DictionaryType == dictionary_type.synonym);
+                    CreateWordsMenu(word, menuSynonyms, synonyms.Select(x => x.Left.Id == word.Id ? x.Right : x.Left));
 
-                    IEnumerable<Word> synonyms = dict_words
-                        .Where<Dictionary>(x => x.DictionaryType == Dictionary.dictionary_type.synonym)
-                        .Select<Dictionary, Word>(x => x.Left.Id == word.Id ? x.Right : x.Left);
-
-                    IEnumerable<Word> antonyms = dict_words
-                        .Where<Dictionary>(x => x.DictionaryType == Dictionary.dictionary_type.antonym)
-                        .Select<Dictionary, Word>(x => x.Left.Id == word.Id ? x.Right : x.Left);
-
-                    CreateWordsMenu(word, menuSynonyms, synonyms);
-                    CreateWordsMenu(word, menuAntonyms, antonyms);
+                    IEnumerable<Dictionary> antonyms = list.Where(pr => pr.DictionaryType == dictionary_type.antonym);
+                    CreateWordsMenu(word, menuAntonyms, antonyms.Select(x => x.Left.Id == word.Id ? x.Right : x.Left));
                 }
             }
 
@@ -1244,12 +1238,12 @@ namespace VocabularyTest.Addons.VocabularyWindow
 
         void menuDefineSynonyms_Click(object sender, EventArgs e)
         {
-            DefineLexicalData(Dictionary.dictionary_type.synonym);
+            ((IVocabularyWindow)this).DefineLexicalData(dictionary_type.synonym);
         }
 
         void menuDefineAntonyms_Click(object sender, EventArgs e)
         {
-            DefineLexicalData(Dictionary.dictionary_type.antonym);
+            ((IVocabularyWindow)this).DefineLexicalData(dictionary_type.antonym);
         }
 
         void gridEntries_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)

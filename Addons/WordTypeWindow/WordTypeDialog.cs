@@ -53,7 +53,7 @@ namespace VocabularyTest.Addons.WordTypeWindow
                 AddLanguage(lang);
             }
             
-            comboSpecial.SelectedIndex = (int)WordType.grammatical.none;
+            comboSpecial.SelectedIndex = (int)grammatical.none;
         }
         
         protected override void OnBeforeEditingObject()
@@ -85,7 +85,7 @@ namespace VocabularyTest.Addons.WordTypeWindow
         {
             base.OnBeforeCommitObject();
             Current.Name = textWordTypeName.Text;
-            Current.Special = comboSpecial.SelectedIndex != -1 ? (WordType.grammatical)comboSpecial.SelectedIndex : WordType.grammatical.none;;
+            Current.Special = comboSpecial.SelectedIndex != -1 ? (grammatical)comboSpecial.SelectedIndex : grammatical.none;;
             foreach (DataGridViewRow row in gridShortNames.Rows)
             {
                 Current.AddAbbreviation((Abbreviation)row.Cells["ColumnShortName"].Value);

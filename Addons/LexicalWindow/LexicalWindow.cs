@@ -35,7 +35,11 @@ namespace VocabularyTest.Addons.LexicalWindow
     using System.Text;
     using System.Threading.Tasks;
     using System.Windows.Forms;
+    using NHibernate;
     using VocabularyTest.Addons.Core;
+    using VocabularyTest.Data;
+    using VocabularyTest.Data.Entities;
+    using VocabularyTest.Data.Repositories;
     using WeifenLuo.WinFormsUI.Docking;
 
     public partial class LexicalWindow : ToolWindow
@@ -45,6 +49,8 @@ namespace VocabularyTest.Addons.LexicalWindow
 
         [Import(typeof(IVocabularyWindow))]
         IVocabularyWindow vocabularyWindow { get; set; }
+
+        IEnumerable<Word> lexical;
 
         public LexicalWindow()
         {
@@ -60,14 +66,53 @@ namespace VocabularyTest.Addons.LexicalWindow
             AddDependenceItem("VocabularyWindow");
         }
 
+        protected override void RunOnce()
+        {
+            base.RunOnce();
+            vocabularyWindow.WordsSelected += (sender, e) => Update(e.Words);
+        }
+
         protected override void Run()
         {
             ShowWindow(host.Workbench, DockState.DockRight);
         }
 
+        protected virtual IEnumerable<Word> Lexical(DictionaryRepository repo, Word word) => null;
+
+        protected virtual dictionary_type? DictionaryType() => null;
+
+        void Update(IEnumerable<Word> words)
+        {
+            int count = words.Count();
+            buttonDelete.Enabled = count == 1;
+            buttonDefine.Enabled = count > 1;
+            listLexical.Enabled = count > 0;
+
+            listLexical.Items.Clear();
+            if (count == 1)
+            {
+                Update(words.First());
+            }
+        }
+
+        void Update(Word word)
+        {
+            using (ISession session = DataHelper.OpenSession())
+            {
+                using (ITransaction transaction = session.BeginTransaction())
+                {
+                    DictionaryRepository repo = new DictionaryRepository(session);
+                    foreach (Word w in Lexical(repo, word))
+                    {
+                        listLexical.Items.Add(w);
+                    }
+                }
+            }
+        }
+
         void buttonDefine_Click(object sender, EventArgs e)
         {
-
+            vocabularyWindow.DefineLexicalData(DictionaryType().Value);
         }
 
         void buttonDelete_Click(object sender, EventArgs e)

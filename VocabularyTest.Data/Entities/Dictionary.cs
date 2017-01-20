@@ -27,10 +27,10 @@ namespace VocabularyTest.Data.Entities
 {
     using Base;
 
+    public enum dictionary_type { synonym, antonym }
+
     public class Dictionary : Entity
     {
-        public enum dictionary_type { synonym, antonym }
-        
         public virtual Word Left { get; set; }
         public virtual Word Right { get; set; }
         public virtual dictionary_type DictionaryType { get; set; }

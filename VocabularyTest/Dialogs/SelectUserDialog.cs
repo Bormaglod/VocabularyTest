@@ -61,7 +61,7 @@ namespace VocabularyTest
                 Repository<Account> repo = new Repository<Account>(session);
                 
                 IEnumerable<Account> users = from Account account in repo.All().List()
-                    where account.Role == Account.account_role.user || (account.Role == Account.account_role.administrator && admin)
+                    where account.Role == account_role.user || (account.Role == account_role.administrator && admin)
                     select account;
                 
                 if (users.FirstOrDefault() == null)

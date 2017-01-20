@@ -26,16 +26,11 @@
 namespace VocabularyTest.Data.Entities
 {
     using Base;
-    
+
+    public enum account_role { administrator, user }
+
     public class Account : Entity
     {
-        public enum account_role
-        {
-            administrator,
-            
-            user
-        }
-
         public virtual string Name { get; set; }
         public virtual account_role Role { get; set; }
 

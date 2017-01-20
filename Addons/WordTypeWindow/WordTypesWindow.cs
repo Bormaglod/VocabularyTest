@@ -96,13 +96,13 @@ namespace VocabularyTest.Addons.WordTypeWindow
         {
             InitializeComponent();
             
-            foreach (WordType.grammatical field in Enum.GetValues(typeof(WordType.grammatical)))
+            foreach (grammatical field in Enum.GetValues(typeof(grammatical)))
             {
                 Type typeField = field.GetType();
                 
                 foreach (FieldInfo fi in typeField.GetFields())
                 {
-                    if (fi.FieldType != typeof(WordType.grammatical))
+                    if (fi.FieldType != typeof(grammatical))
                     {
                         continue;
                     }
@@ -119,7 +119,7 @@ namespace VocabularyTest.Addons.WordTypeWindow
                         AddGrammaticalMenu(menuGrammatical.DropDownItems, field, attr.Description);
                     }
                     
-                    if (field == WordType.grammatical.none)
+                    if (field == grammatical.none)
                     {
                         buttonGrammatical.DropDownItems.Add(new ToolStripSeparator());
                         menuGrammatical.DropDownItems.Add(new ToolStripSeparator());
@@ -282,7 +282,7 @@ namespace VocabularyTest.Addons.WordTypeWindow
             return node;
         }
         
-        void AddGrammaticalMenu(ToolStripItemCollection items, WordType.grammatical grammatical, string text)
+        void AddGrammaticalMenu(ToolStripItemCollection items, grammatical grammatical, string text)
         {
             ToolStripItem item = items.Add(text);
             item.Tag = grammatical;
@@ -314,7 +314,7 @@ namespace VocabularyTest.Addons.WordTypeWindow
             {
                 if (item.Tag != null)
                 {
-                    ((ToolStripMenuItem)item).Checked = (WordType.grammatical)item.Tag == wordType.Special;
+                    ((ToolStripMenuItem)item).Checked = (grammatical)item.Tag == wordType.Special;
                 }
             }
         }

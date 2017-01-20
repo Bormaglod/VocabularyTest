@@ -30,57 +30,57 @@ namespace VocabularyTest.Data.Entities
     using ComponentFactory.Krypton.Toolkit;
     using Core;
     using Base;
-    
+
+    public enum grammatical
+    {
+        [LocalizedDescription("WordTypeIsNotDefined")]
+        none,
+
+        /// <summary>
+        /// Существительное.
+        /// </summary>
+        [LocalizedDescription("Noun")]
+        noun,
+
+        /// <summary>
+        /// Существительное, мужской род.
+        /// </summary>
+        [LocalizedDescription("Male")]
+        male,
+
+        /// <summary>
+        /// Существительное, женский род.
+        /// </summary>
+        [LocalizedDescription("Female")]
+        female,
+
+        /// <summary>
+        /// Существительное, средний род.
+        /// </summary>
+        [LocalizedDescription("Neutral")]
+        neutral,
+
+        /// <summary>
+        /// Прилагательное.
+        /// </summary>
+        [LocalizedDescription("Adjective")]
+        adjective,
+
+        /// <summary>
+        /// Наречие.
+        /// </summary>
+        [LocalizedDescription("Adverb")]
+        adverb,
+
+        /// <summary>
+        /// Глагол.
+        /// </summary>
+        [LocalizedDescription("Verb")]
+        verb
+    }
+
     public class WordType : Entity, IContentValues
     {
-        public enum grammatical
-        {
-            [LocalizedDescription("WordTypeIsNotDefined")]
-            none,
-            
-            /// <summary>
-            /// Существительное.
-            /// </summary>
-            [LocalizedDescription("Noun")]
-            noun,
-            
-            /// <summary>
-            /// Существительное, мужской род.
-            /// </summary>
-            [LocalizedDescription("Male")]
-            male,
-            
-            /// <summary>
-            /// Существительное, женский род.
-            /// </summary>
-            [LocalizedDescription("Female")]
-            female,
-            
-            /// <summary>
-            /// Существительное, средний род.
-            /// </summary>
-            [LocalizedDescription("Neutral")]
-            neutral,
-            
-            /// <summary>
-            /// Прилагательное.
-            /// </summary>
-            [LocalizedDescription("Adjective")]
-            adjective,
-            
-            /// <summary>
-            /// Наречие.
-            /// </summary>
-            [LocalizedDescription("Adverb")]
-            adverb,
-            
-            /// <summary>
-            /// Глагол.
-            /// </summary>
-            [LocalizedDescription("Verb")]
-            verb
-        }
-
         public virtual int? ParentId { get; set; }
         public virtual string Name { get; set; }
         public virtual grammatical Special { get; set; }

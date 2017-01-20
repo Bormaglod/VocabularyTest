@@ -36,6 +36,8 @@ namespace VocabularyTest.Addons.LexicalWindow
     using System.Threading.Tasks;
     using System.Windows.Forms;
     using VocabularyTest.Addons.Core;
+    using Data.Entities;
+    using Data.Repositories;
 
     [Export(typeof(IAddon))]
     public partial class SynonymWindow : LexicalWindow
@@ -47,7 +49,18 @@ namespace VocabularyTest.Addons.LexicalWindow
 
         protected override void RunOnce()
         {
+            base.RunOnce();
             Host.MainMenu["View"].Items.AddCommand("ViewGrades", "ColumnsSeparator", "Синонимы", new ViewWindowCommand(this));
+        }
+
+        protected override IEnumerable<Word> Lexical(DictionaryRepository repo, Word word)
+        {
+            return repo.Synonyms(word);
+        }
+
+        protected override dictionary_type? DictionaryType()
+        {
+            return dictionary_type.synonym;
         }
     }
 }

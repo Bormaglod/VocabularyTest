@@ -53,9 +53,10 @@ namespace VocabularyTest.Addons
         /// </summary>
         event EventHandler<EntitiesModifiedEventArgs<Grade>> GradeContentModified;
 
-        void Update();
+        void DefineLexicalData(dictionary_type lexicalType);
         void RefreshColumns();
         void SetFilter<T>(T filterValue) where T : Entity;
         void SpellCheckEntries();
+        void Update();
     }
 }

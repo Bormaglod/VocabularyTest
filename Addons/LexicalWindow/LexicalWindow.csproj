@@ -33,6 +33,14 @@
     <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e">
       <Private>False</Private>
     </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NHibernate.4.1.0.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
@@ -95,6 +103,11 @@
     <ProjectReference Include="..\..\VocabularyTest.Addons\VocabularyTest.Addons.csproj">
       <Project>{cd9061a0-74bb-49ac-b66e-daa04fca0f94}</Project>
       <Name>VocabularyTest.Addons</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VocabularyTest.Data\VocabularyTest.Data.csproj">
+      <Project>{0e35ff84-0daf-4003-aac8-bd366061040a}</Project>
+      <Name>VocabularyTest.Data</Name>
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
